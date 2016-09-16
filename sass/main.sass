@@ -6,6 +6,27 @@
 	font-family: HeuristicaRegular
 	font-size: 14pt
 	color: $text_color
+
+
+a.themes_url
+	color: $text_color
+	text-decoration: none 
+	&:after
+		content: ""
+		position: absolute
+		right: 0
+		width: 19px
+		background-color: #000
+		height: 2px
+		display: block
+		// margin-top: -12px
+		transition: all ease .5s
+	&:hover
+		&:after
+			width: 100%
+			margin-left: 0
+
+
 .header_banner
 	background-color: #F2F2F2
 	border-top: solid 68px #fff
@@ -40,23 +61,10 @@
 				text-transform: uppercase
 				display: inline-block
 				position: relative
-				a
-					color: $text_color
-					text-decoration: none 
+				a.themes_url
 					&:after
-						content: ""
-						position: absolute
-						right: 0
-						width: 19px
-						background-color: #000
-						height: 2px
-						display: block
 						margin-top: -12px
-						transition: all ease .3s
-					&:hover
-						&:after
-							width: 100%
-							margin-left: 0
+
 .footer_block
 	background-color: #F2F2F2
 	padding: 38px 30px
@@ -81,19 +89,12 @@
 			// position: absolute
 			right: 0
 			transition: all ease .5s
-	&:hover
-		a
+		&:hover
 			&:after
 				width: 35%
 				margin-left: 65%
 
-
-.section_content
-	.news
-		border-left: solid 1px #E6E6E6
-	// .poster
-	// 	border-right: solid 1px #E6E6E6
-	.col_content
+.col_content
 		.descriotion_block
 			font-family: OpenSansRegular
 			font-size: 14pt
@@ -107,6 +108,10 @@
 				font-size: 10pt
 				color: #B3B3B3
 				margin-right: 15px
+
+.section_content
+	.news
+		border-left: solid 1px #E6E6E6
 	.poster
 		position: relative
 		padding-bottom: 105px
@@ -193,6 +198,62 @@
 			position: absolute
 			bottom: 0
 			margin-left: 5.5%
+
+
+.services_and_groups
+	.service
+		padding-top: 87px
+		padding-left: 30px
+		padding-right: 30px
+		.wrap_service
+			.wrap_img
+				position: relative
+				img
+					width: 100%
+			.service_text
+				position: absolute
+				bottom: 0
+				width: 100%
+				max-width: 340px
+				padding: 15px 10px
+				display: block
+				background-color: #fff
+				.caption
+					font-size: 16pt
+				.wrap_url
+					position: relative
+					display: inline-block
+
+
+	.groups
+		border-left: solid 1px #E6E6E6;
+		padding-top: 87px
+		padding-left: 30px
+		padding-right: 30px
+		.wrap_groups
+			.wrap_img
+				position: relative
+				img
+					width: 100%
+			.groups_text
+				position: absolute
+				bottom: 0
+				width: 100%
+				max-width: 340px
+				padding: 15px 10px
+				display: block
+				background-color: #fff
+				.caption
+					font-size: 16pt
+					span
+						font-size: 11pt
+						font-family: OpenSansRegular
+						color: #999
+				.wrap_url
+					position: relative
+					display: inline-block
+		
+
 					
 
 
