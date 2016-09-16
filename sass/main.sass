@@ -2,6 +2,183 @@
 @import "vars"
 @import "libs"
 
+.caption
+	font-family: HeuristicaRegular
+	font-size: 14pt
+	color: $text_color
+.header_banner
+	background-color: #F2F2F2
+	border-top: solid 68px #fff
+	.wrap_banner
+		margin-top: -68px
+	.carusel
+		width: 100%
+	.item_carusel
+		position: relative
+		width: 100%
+		img
+			width: 100%
+		.descript_baner
+			max-width: 813px
+			width: 100%
+			height: 172px
+			background-color: #F2F2F2
+			position: absolute
+			bottom: 0
+			padding: 25px 75px
+			line-height: 49px
+			.caption
+				font-size: 33.228pt
+			.date_banner
+				color: #999
+				font-family: HeuristicaRegular
+				font-size: 14pt
+				display: inline-block
+				margin-right: 35px
+			.url_banner
+				font-family: OpenSansRegular
+				text-transform: uppercase
+				display: inline-block
+				position: relative
+				a
+					color: $text_color
+					text-decoration: none 
+					&:after
+						content: ""
+						position: absolute
+						right: 0
+						width: 19px
+						background-color: #000
+						height: 2px
+						display: block
+						margin-top: -12px
+						transition: all ease .3s
+					&:hover
+						&:after
+							width: 100%
+							margin-left: 0
+.footer_block
+	background-color: #F2F2F2
+	padding: 38px 30px
+	text-align: right
+	margin-left: 20px
+	margin-right: 20px
+	a
+		color: #000
+		text-transform: uppercase
+		font-family: OpenSansRegular
+		font-size: 10pt
+		text-decoration: none
+		position: relative
+		&:after
+			content: ""
+			display: block
+			width: 22px
+			background-color: #000
+			height: 2px
+			position: absolute
+			right: 0
+			transition: all ease .5s
+		&:hover
+			&:after
+				width: 100%
+
+
+.section_content
+	.news
+		border-left: solid 1px #E6E6E6
+	// .poster
+	// 	border-right: solid 1px #E6E6E6
+	.col_content
+		.descriotion_block
+			font-family: OpenSansRegular
+			font-size: 14pt
+			color: $text_color
+			font-weight: bold
+			margin-top: 50px
+			margin-bottom: 50px
+			margin-left: 20px
+			span
+				font-weight: normal
+				font-size: 10pt
+				color: #B3B3B3
+				margin-right: 15px
+	.poster
+		.item_poster
+			padding-left: 15px
+			padding-right: 15px
+			margin-bottom: 45px
+			.wrap_img
+				max-width: 256px
+				float: left
+				display: block
+				margin-right: 18px
+				img
+					width: 100%
+			.caption
+				display: inline-block
+			.date_poster
+				font-family: HeuristicaRegular
+				font-size: 14pt
+				color: #999
+				display: inline-block
+				margin-left: 10px
+			.description__poster
+				font-family: OpenSansRegular
+				font-size: 10.5pt
+				color: #666
+				margin-top: 10px
+	.news	
+		.item_news
+			margin-left: 20px
+			margin-top: 20px
+			.wrap_text
+				height: 38px
+			&:nth-last-child(2)
+				margin-bottom: 55px
+				&:after
+					height: 0
+			&:after
+				content: ""
+				width: 160px
+				height: 1px
+				background-color: #E6E6E6
+				display: block
+				margin-top: 25px
+			.caption
+				margin-bottom: 15px
+			.date_news
+				font-family: OpenSansRegular
+				font-size: 10pt
+				color: #999
+				display: inline-block
+				margin-right: 20px
+			a
+				display: inline-block
+				font-family: OpenSansRegular
+				font-size: 10pt
+				text-transform: uppercase
+				color: $text_color
+				text-decoration: none
+				padding: 9px 15px 9px 15px
+				border-radius: 0 10em 10em  10em
+				background-color: #fff
+				width: 1px
+				height: 1px
+				// transition: all ease 1s
+				transition-property:  width, height,background-color;
+				transition-duration: .5s, .6s;
+				transition-timing-function: ease;
+				&:hover
+					width: 99px
+					background-color: #E6E6E6
+					height: 39px
+					&.item_news
+						&:after
+							margin-top: 25px
+
+
+	
 
 
 @import "media"
