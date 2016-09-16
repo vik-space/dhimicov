@@ -1,6 +1,21 @@
 $(function() {
 
-// $("#my_carusel").owlCarousel();
+ $("#carusel_photo_report").owlCarousel({
+ 	items : 1,
+ 	slideSpeed: 1000,
+ 	autoPlay: true,
+ 	itemsDesktop : [1199,1],
+ 	itemsDesktopSmall : [980,1],
+ 	itemsTablet: [768,1],
+ 	stopOnHover: true
+ });
+
+$(".custom_prev").click(function() {
+     $("#carusel_photo_report").trigger("owl.prev");
+  });
+  $(".custom_next").click(function() {
+     $("#carusel_photo_report").trigger("owl.next");
+  });
 
 
 // Вычисление максимальной высоты колонок Афиша и Новости, меньшей колонке присваиваем большую высоту
