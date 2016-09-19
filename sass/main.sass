@@ -133,15 +133,54 @@ a.themes_url
 			padding-left: 15px
 			padding-right: 15px
 			margin-bottom: 45px
-			height: auto;
-			min-height: 180px;
+			height: auto
+			min-height: 180px
 			.wrap_img
 				max-width: 256px
+				width: 100%
 				float: left
 				display: block
 				margin-right: 18px
+				border: none
+				position: relative
 				img
-					width: 100%
+					transition: all cubic-bezier(0, 0.42, 0.8, 1) .9s
+			// 	&:before
+			// 		content: "";
+			// 		display: block;
+			// 		position: absolute;
+			// 		top: 50%;
+			// 		left: 50%;
+			// 		height: calc(100% + 5px);
+			// 		width: calc(100% + 5px);
+			// 		border: solid 5px #fff;
+			// 		-webkit-box-sizing: border-box;
+			// 		-moz-box-sizing: border-box;
+			// 		box-sizing: border-box;
+			// 		-webkit-transform: translate(-50%,-50%);
+			// 		-moz-transform: translate(-50%,-50%);
+			// 		-o-transform: translate(-50%,-50%);
+			// 		-ms-transform: translate(-50%,-50%);
+			// 		-webkit-transition: all 0.9s cubic-bezier(0, 0.42, 0.8, 1);
+			// 		-moz-transition: all 0.9s cubic-bezier(0, 0.42, 0.8, 1);
+			// 		-o-transition: all 0.9s cubic-bezier(0, 0.42, 0.8, 1);
+			// 		-ms-transition: all 0.9s cubic-bezier(0, 0.42, 0.8, 1);
+			// 		transition: all 0.9s cubic-bezier(0, 0.42, 0.8, 1);
+			// 		z-index: 1;
+			// 		-webkit-transform-origin: top left;
+			// 		-moz-transform-origin: top left;
+			// 		-o-transform-origin: top left;
+			// 		-ms-transform-origin: top left;
+			// 		transform-origin: top left;
+			// &:hover
+			// 	.wrap_img
+			// 		&:before
+			// 			height: calc(100% + 30px);
+			// 			width: calc(100% + 30px);
+			// 			border: solid 20px #fff;
+			// 	img
+			// 		transform: scale(1.1)
+
 			.caption
 				display: inline-block
 			.date_poster
