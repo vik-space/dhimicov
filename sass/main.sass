@@ -42,11 +42,10 @@ a.themes_url
 		.descript_baner
 			max-width: 813px
 			width: 100%
-			height: 172px
 			background-color: #F2F2F2
 			position: absolute
 			bottom: 0
-			padding: 25px 75px
+			padding: 25px 75px 0
 			line-height: 49px
 			.caption
 				font-size: 33.228pt
@@ -64,6 +63,21 @@ a.themes_url
 				a.themes_url
 					&:after
 						margin-top: -12px
+			.custom_prev_banner 
+				position: absolute
+				left: 30px
+				z-index: 2
+				top: 30%
+				font-size: 20px
+				color: #000
+				cursor: pointer
+			.custom_next_banner
+				position: absolute
+				right: 55px
+				top: 30%
+				font-size: 20px
+				color: #000
+				cursor: pointer
 
 .footer_block
 	background-color: #F2F2F2
@@ -313,12 +327,14 @@ a.themes_url
 				top: 40%
 				font-size: 20px
 				color: #000
+				cursor: pointer
 			.custom_next
 				position: absolute
 				right: 12px
 				top: 40%
 				font-size: 20px
 				color: #000
+				cursor: pointer
 footer
 	.content_footer
 		background-color: #F2F2F2
@@ -333,8 +349,9 @@ footer
 		.name
 			display: inline-block
 			width: 350px
-			padding-top: 35px
+			padding-top: 30px
 			margin-left: 30px
+			color: #4D4D4D
 		.contact_footer
 			margin-top: 10px
 			margin-left: 30px
@@ -345,8 +362,24 @@ footer
 				color: #4D4D4D
 				margin-bottom: 8px
 				display: inline-block
-
-
+			a
+				margin-top: 10px
+				display: inline-block
+				color: #000
+				text-decoration: underline
+				transition: all ease .3s
+				&:hover
+					text-decoration: none
+.developer
+	text-align: right
+	font-family: OpenSansRegular
+	font-size: 10.5pt
+	color: #B3B3B3
+	padding-top: 9px
+	padding-bottom: 9px
+	padding-right: 10px
+	img
+		margin-left: 10px
 
 	
 
