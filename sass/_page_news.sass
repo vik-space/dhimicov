@@ -1,0 +1,126 @@
+.page_news
+	.right_vertical_line
+		border-right: solid 1px #000
+		height: 25px
+	.col_border_right
+		border-right: solid 1px #E6E6E6
+	.row_news
+		&:last-child
+			.text_news
+				&:before
+					background-color: #E6E6E6
+		&:first-child
+			.wrap_img
+				padding-top: 45px
+			.item_news
+				padding-top: 40px
+		.img_news
+			height 306px
+		.text_news
+			height: 306px
+			padding-bottom: 22px
+			position: relative
+			&:before
+				content: ""
+				height: 25px
+				width: 1px
+				background-color: #000
+				display: block
+				position: absolute
+				left:  -1px
+				bottom: 0
+		.wrap_img
+			padding-top: 25px
+			width: 100%
+			text-align: right
+			padding-bottom: 25px
+			padding-right: 40px
+			img
+				width: 100%
+				display: inline-block
+				max-width: 320px
+		.item_news
+			padding-top: 20px
+			margin-left: 20px
+			margin-right: 80px
+			.wrap_text
+				height: 38px
+			.prew_news
+				font-family: OpenSansRegular
+				font-size: 10.5pt
+				color: #666
+				line-height: 29px
+				margin-top: 0
+			&:nth-last-child(2)
+				margin-bottom: 55px
+				&:after
+					height: 0
+
+			.caption
+				// margin-bottom: 15px
+			.date_news
+				font-family: OpenSansRegular
+				font-size: 10pt
+				color: #999
+				display: inline-block
+				margin-right: 20px
+			a
+				display: inline-block
+				font-family: OpenSansRegular
+				font-size: 10pt
+				text-transform: uppercase
+				color: transparent
+				text-decoration: none
+				padding: 9px 15px 9px 15px
+				border-radius: 0 10em 10em  10em
+				background-color: transparent
+				width: 1px
+				height: 1px
+				// transition: all ease 1s
+				transition-property:  color, width, height, background-color, margin-right ;
+				transition-duration: .6s,.5s, .6s;
+				transition-timing-function: ease;
+			&:hover
+				a
+					width: 99px
+					background-color: #E6E6E6
+					height: 39px
+					color: $text_color
+.page_news
+	.row_news
+		&:nth-child(2n)
+			.img_news
+				float: right
+				position: relative
+				&:before
+					content: ""
+					height: 25px
+					width: 1px
+					background-color: #000
+					display: block
+					position: absolute
+					left: -1px
+					bottom: 6px
+					z-index: 100
+				.wrap_img
+					padding-left: 40px
+					text-align:: left 
+			.col_border_right
+				border-right: none
+			.text_news
+				border-right: solid 1px #E6E6E6
+				text-align: right
+				&:before
+					display: none
+				.item_news
+					margin-right: 20px 
+					margin-left: 80px
+				.date_news
+					float: right
+					margin-right: 0
+					margin-left: 20px
+				a
+					border-radius: 10em 0 10em  10em
+				&:hover
+					a
+						margin-right: 0

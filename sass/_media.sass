@@ -12,6 +12,15 @@
 				margin-bottom: 18px
 				max-width: 100%
 				float: none
+	.page_news 
+		.row_news 
+			.item_news
+				margin-right: 0
+	.page_news 
+		.row_news:nth-child(2n) 
+			.text_news 
+				.item_news
+					margin-left: 0
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
@@ -35,6 +44,11 @@
 				.item_carusel
 					.descript_baner
 						position: relative
+
+	.page_news 
+		.row_news 
+			.text_news
+				height: 330px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
@@ -48,16 +62,79 @@
 	.services_and_groups 
 		.service 
 			.wrap_service 
-				.service_text
 					max-width: 100%
+
 		.groups 
 			.wrap_groups 
 				.groups_text
 					max-width: 100%
+
 	#carusel_photo_report
 		.item_photo_report
 			.photo_report_text
 				position: absolute
+
+			
+	.page_news
+		.row_news
+			.text_news
+				height: auto
+				&:before
+					display: none
+			.wrap_img
+				padding-bottom: 0
+				padding-right: 0
+				img
+					max-width: 100%
+			.item_news
+				margin-left: 0
+			&:first-child
+				.wrap_img
+					padding-top: 45px
+				.item_news
+					padding-top: 20px
+			&:nth-child(2n)
+				.img_news
+					float: none
+					&:before
+						display: none
+					.wrap_img
+						padding-left: 0
+						padding-bottom: 0
+						text-align:: left 
+				.col_border_right
+					border-right: none
+				.text_news
+					border-right: solid 1px #E6E6E6
+					text-align: left
+					.item_news
+						margin-right: 20px 
+						margin-left: 0px
+					.date_news
+						float: none
+						margin-right: 0
+						margin-left: 20px
+	// .page_news 
+	// 	.row_news 
+	// 		.text_news
+	// 			height: auto
+	// 		.wrap_img
+	// 			padding-right: 0
+	// 			padding-bottom: 20px
+
+	// .page_news
+	// 	.row_news
+	// 		&:nth-child(2n)
+	// 			.img_news 
+	// 				.wrap_img
+	// 					padding-left: 0
+	// 			.text_news
+	// 				text-align: left
+	// 				.date_news
+	// 					float: none
+	// 				.item_news
+	// 					margin-left: 20px
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
