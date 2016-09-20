@@ -2,7 +2,15 @@
 @import "vars"
 
 /*==========  Desktop First  ==========*/
-
+@media only screen and (max-width : 1300px)
+	.section_services
+		.header_img
+			.col_left
+				padding-left: 25px
+				padding-right: 25px
+			.col_right
+				padding-right: 25px
+				padding-left: 25px
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
@@ -164,6 +172,36 @@
 			.contact_footer
 				margin-left: 0
 				margin-bottom: 50px
+
+	.section_services
+		&:after
+			display: none
+		.header_img
+			.col_left
+			.col_right
+		.service_content
+			.hall
+				margin-top: 20px
+				margin-bottom: 20px
+				text-align: left
+			.big_hall
+				margin-top: 70px
+				.caption
+					&:after
+						left: 0
+			.little_hall
+				.caption
+					&:after
+						left: 0
+				.num
+					padding-left: 0
+			.dance_hall
+				.caption
+					&:after
+						left: 0
+				.num
+					margin-left: 0
+
 
 
 /* Extra Small Devices, Phones */
