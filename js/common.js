@@ -56,23 +56,40 @@ if( heght_poster > heght_news){
 }
 }
 
-// Вычисление максимальной высоты колонок на странице новости, меньшей колонке присваиваем большую высоту
- var heght_img_news = $(".row_news .img_news").css('height');
- var heght_text_news = $(".row_news .text_news").css('height');
+// Вычисление максимальной высоты колонок на странице конкретной новости, меньшей колонке присваиваем большую высоту
+var heght_this_new = $(".this_new").css('height');
+var heght_news_list = $(".news_list").css('height');
+if($.trim(heght_this_new) != '' && $.trim(heght_news_list) != '' &&  document.documentElement.clientWidth > 992){
 
-if($.trim(heght_img_news) != '' && $.trim(heght_text_news) != '' && document.documentElement.clientWidth > 768){
+heght_this_new = Number(heght_this_new.substr(0, heght_this_new.length - 2));
+heght_news_list = Number(heght_news_list.substr(0, heght_news_list.length - 2));
 
- heght_img_news = Number(heght_img_news.substr(0, heght_img_news.length - 2));
- heght_text_news = Number(heght_text_news.substr(0, heght_text_news.length - 2));
- if( heght_img_news > heght_text_news){
-   $(".row_news .text_news").height(heght_img_news );
-   // $(".news").css("padding-bottom","0");
-   // console.log(heght_img_news);
- }else{
-   // $(".row_news .img_news").css("padding-bottom","0");
-   $(".row_news .img_news").height(heght_text_news);
-   // console.log(heght_text_news);
+if( heght_this_new > heght_news_list){
+  $(".news_list").height(heght_this_new );
+  console.log(heght_this_new);
+}else{
+  $(".this_new").height(heght_news_list);
+  console.log(heght_news_list);
 }
 }
+
+// // Вычисление максимальной высоты колонок на странице новости, меньшей колонке присваиваем большую высоту
+//  var heght_img_news = $(".row_news .img_news").css('height');
+//  var heght_text_news = $(".row_news .text_news").css('height');
+
+// if($.trim(heght_img_news) != '' && $.trim(heght_text_news) != '' && document.documentElement.clientWidth > 768){
+
+//  heght_img_news = Number(heght_img_news.substr(0, heght_img_news.length - 2));
+//  heght_text_news = Number(heght_text_news.substr(0, heght_text_news.length - 2));
+//  if( heght_img_news > heght_text_news){
+//    $(".row_news .text_news").height(heght_img_news );
+//    // $(".news").css("padding-bottom","0");
+//    // console.log(heght_img_news);
+//  }else{
+//    // $(".row_news .img_news").css("padding-bottom","0");
+//    $(".row_news .img_news").height(heght_text_news);
+//    // console.log(heght_text_news);
+// }
+// }
 
 });

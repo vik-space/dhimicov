@@ -1,0 +1,88 @@
+.current_news
+	.this_new
+		border-right: 1px solid #E6E6E6
+		padding-bottom: 25px
+		.item_news
+			padding-left: 30px
+			padding-right: 60px
+			padding-top: 40px
+			.wrap_text
+				margin-top: 25px
+				margin-bottom: 25px
+			.caption
+				margin-bottom: 15px
+				font-size: 18pt
+			.wrap_img
+				width: 100%
+				img
+					width: 85%
+			.date_news
+				font-family: OpenSansRegular
+				font-size: 10pt
+				color: #999
+				display: inline-block
+				margin-right: 20px
+			.news_content
+				font-family: OpenSansRegular
+				font-size: 10.5pt
+				color: #1A1A1A
+				line-height: 29px
+				p
+					margin-bottom: 30px
+	.news_list
+		padding-bottom: 25px
+		.descriotion_block
+			font-family: OpenSansRegular
+			font-size: 14pt
+			color: $text_color
+			font-weight: bold
+			margin-top: 40px
+			margin-bottom: 50px
+			margin-left: 20px
+			span
+				font-weight: normal
+				font-size: 14pt
+				color: #B3B3B3
+				margin-right: 15px
+		.item_news
+			margin-left: 20px
+			margin-top: 20px
+			.wrap_text
+				height: 38px
+			&:after
+				content: ""
+				width: 160px
+				height: 1px
+				background-color: #E6E6E6
+				display: block
+				margin-top: 25px
+			.caption
+				margin-bottom: 15px
+			.date_news
+				font-family: OpenSansRegular
+				font-size: 10pt
+				color: #999
+				display: inline-block
+				margin-right: 20px
+			a
+				display: inline-block
+				font-family: OpenSansRegular
+				font-size: 10pt
+				text-transform: uppercase
+				color: transparent
+				text-decoration: none
+				padding: 9px 15px 9px 15px
+				border-radius: 0 10em 10em  10em
+				background-color: transparent
+				width: 1px
+				height: 1px
+				// transition: all ease 1s
+				transition-property:  color, width, height,background-color ;
+				transition-duration: .6s,.5s, .6s;
+				transition-timing-function: ease;
+			&:hover
+				a
+					width: 99px
+					background-color: #E6E6E6
+					height: 39px
+					color: $text_color
