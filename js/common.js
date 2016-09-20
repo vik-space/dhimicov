@@ -65,7 +65,7 @@ heght_this_new = Number(heght_this_new.substr(0, heght_this_new.length - 2));
 heght_news_list = Number(heght_news_list.substr(0, heght_news_list.length - 2));
 
 if( heght_this_new > heght_news_list){
-  $(".news_list").height(heght_this_new );
+  $(".news_list").height(heght_this_new - 25);
   console.log(heght_this_new);
 }else{
   $(".this_new").height(heght_news_list);
