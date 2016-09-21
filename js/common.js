@@ -38,8 +38,10 @@ $(function() {
 
 
 // Вычисление максимальной высоты колонок Афиша и Новости, меньшей колонке присваиваем большую высоту
-var heght_poster = $(".poster").css('height');
-var heght_news = $(".news").css('height');
+var heght_poster = " ";
+var heght_news = " ";
+heght_poster = $(".poster").css('height');
+heght_news = $(".news").css('height');
 if($.trim(heght_poster) != '' && $.trim(heght_news) != '' &&  document.documentElement.clientWidth > 768){
 
   heght_poster = Number(heght_poster.substr(0, heght_poster.length - 2)) - 105;
@@ -57,8 +59,11 @@ if($.trim(heght_poster) != '' && $.trim(heght_news) != '' &&  document.documentE
 }
 
 // Вычисление максимальной высоты колонок на странице конкретной новости, меньшей колонке присваиваем большую высоту
-var heght_this_new = $(".this_new").css('height');
-var heght_news_list = $(".news_list").css('height');
+var heght_this_new = " ";
+var heght_news_list = " ";
+heght_this_new = $(".this_new").css('height');
+heght_news_list = $(".news_list").css('height');
+
 if($.trim(heght_this_new) != '' && $.trim(heght_news_list) != '' &&  document.documentElement.clientWidth > 992){
 
   heght_this_new = Number(heght_this_new.substr(0, heght_this_new.length - 2));
@@ -74,8 +79,11 @@ if($.trim(heght_this_new) != '' && $.trim(heght_news_list) != '' &&  document.do
 }
 
 
+
+//Прилипание контактов на странице коллектива
 if(document.documentElement.clientWidth > 992){
-  var heght_description_groups = $(".col_description_groups").css('height');
+  var heght_description_groups = " ";
+  heght_description_groups = $(".col_description_groups").css('height');
   heght_description_groups = Number(heght_description_groups.substr(0, heght_description_groups.length - 2));
   $(".col_data").height(heght_description_groups);
 
