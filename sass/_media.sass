@@ -11,6 +11,16 @@
 			.col_right
 				padding-right: 25px
 				padding-left: 25px
+
+	.section_current_groups
+		.col_data
+			#groups_contact
+				padding-right: 40px
+				margin-left: 40px
+				max-width: 386px
+		.col_description_groups
+			padding-left: 40px
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
@@ -85,6 +95,16 @@
 			padding-right: 15px
 			&:nth-child(even)
 				margin-left: 0
+	.section_current_groups
+		&:after
+			display: none
+		.col_data
+			padding-bottom: 50px
+			#groups_contact
+				display: inline-block
+				margin-left: 0
+		.col_description_groups
+			padding-bottom: 0px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
@@ -231,6 +251,18 @@
 		.item_groups
 			.descript_groups
 				position: relative
+	.section_current_groups
+		&:after
+			display: none
+		.col_data
+			#groups_contact
+				.phone, .address, .training
+					font-size: 20pt
+				.training
+					line-height: 27px
+					.caption
+						margin-bottom: 10px
+
 
 
 /* Custom, iPhone Retina */
