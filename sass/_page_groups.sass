@@ -1,0 +1,47 @@
+.section_groups
+	position: relative
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		height: 100%
+		width: 1px
+		background-color: #e6e6e6
+		left: 50%
+		top: 0	
+		z-index: -1
+	.item_groups
+		position: relative
+		display: inline-block
+		width: 48%
+		margin-top: 78px
+		padding: 0px 30px 5px
+		margin-left: 1%
+		img
+			width: 100%
+		&:nth-child(even)
+			margin-left: 1.5%
+		.descript_groups
+			max-width: 340px
+			width: 100%
+			background-color: #fff
+			position: absolute
+			bottom: 0
+			padding: 10px 15px 20px 10px
+			line-height: 49px
+			.caption
+				font-size: 16pt
+				line-height: 27px
+				height: 54px
+			.url_groups
+				font-family: OpenSansRegular
+				text-transform: uppercase
+				display: inline-block
+				// position: relative
+				position: absolute
+				right: 15px
+				bottom: -16px
+				font-size: 10pt
+				a.themes_url
+					&:after
+						margin-top: -12px

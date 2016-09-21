@@ -75,6 +75,16 @@
 				.wrap_img 
 					img
 						width: 100%
+	.section_groups
+		&:after
+			display: none
+		.item_groups
+			width: 100%
+			margin-left: 0
+			padding-left: 15px
+			padding-right: 15px
+			&:nth-child(even)
+				margin-left: 0
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
@@ -217,6 +227,10 @@
 				width: 100%
 			.footer_logo
 				display: none
+	.section_groups
+		.item_groups
+			.descript_groups
+				position: relative
 
 
 /* Custom, iPhone Retina */
