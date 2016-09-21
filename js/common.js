@@ -10,6 +10,19 @@ $(function() {
  	stopOnHover: true
  });
 
+ $(".groups_slider").owlCarousel({
+  items : 1,
+  slideSpeed: 1000,
+  autoPlay: true,
+  itemsDesktop : [1199,1],
+  itemsDesktopSmall : [980,1],
+  itemsTablet: [768,1],
+  stopOnHover: true,
+  singleItem : true,
+  // autoHeight : true,
+  // transitionStyle:"fade"
+});
+
 
  $(".carusel").owlCarousel({
  	items : 1,
