@@ -55,7 +55,7 @@ var heght_poster = " ";
 var heght_news = " ";
 heght_poster = $(".poster").css('height');
 heght_news = $(".news").css('height');
-if($.trim(heght_poster) != '' && $.trim(heght_news) != '' &&  document.documentElement.clientWidth > 768){
+if($.trim(heght_poster) != '' && $.trim(heght_news) != '' &&  document.documentElement.clientWidth > 767){
 
   heght_poster = Number(heght_poster.substr(0, heght_poster.length - 2)) - 105;
   heght_news = Number(heght_news.substr(0, heght_news.length - 2)) - 105;
@@ -70,6 +70,8 @@ if($.trim(heght_poster) != '' && $.trim(heght_news) != '' &&  document.documentE
 	// console.log(heght_news);
 }
 }
+
+
 
 // Вычисление максимальной высоты колонок на странице конкретной новости, меньшей колонке присваиваем большую высоту
 var heght_this_new = " ";
@@ -94,9 +96,11 @@ if($.trim(heght_this_new) != '' && $.trim(heght_news_list) != '' &&  document.do
 
 
 //Прилипание контактов на странице коллектива
-if(document.documentElement.clientWidth > 992){
-  var heght_description_groups = " ";
+
   heght_description_groups = $(".col_description_groups").css('height');
+
+  if(document.documentElement.clientWidth > 992 && $.trim(heght_description_groups) != ''){
+
   heght_description_groups = Number(heght_description_groups.substr(0, heght_description_groups.length - 2));
   $(".col_data").height(heght_description_groups);
 
