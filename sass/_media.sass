@@ -41,6 +41,15 @@
 			.btn_filter
 				&:after
 					margin-left: 0
+	.current_poster 
+		.poster_data 
+			.RL
+				&:after
+					display: none
+				.item_date
+					display: inline-block
+					width: 40%
+
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
@@ -127,6 +136,11 @@
 				margin-left: 0
 		.col_description_groups
 			padding-bottom: 0px
+	.current_poster
+		&:after
+			display: none
+		.poster_data
+			padding-bottom: 5px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
@@ -253,7 +267,14 @@
 						left: 0
 				.num
 					margin-left: 0
-
+	.current_poster
+		.poster_data
+			.wrap_img
+				.full_img
+					width: 100%
+					margin-bottom: 25px
+				.poster_img
+					width: 100%
 
 
 /* Extra Small Devices, Phones */
@@ -284,6 +305,20 @@
 					line-height: 27px
 					.caption
 						margin-bottom: 10px
+	.current_poster
+		.poster_data
+			padding-bottom: 25px
+			.item_date
+				.cashbox
+					position: relative
+					margin-right: 45px
+					margin-left: 0
+			.RL
+				.item_date
+					display: block
+					margin-right: 0
+					width: 100%
+
 
 
 
