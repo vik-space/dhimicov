@@ -136,11 +136,19 @@
 				margin-left: 0
 		.col_description_groups
 			padding-bottom: 0px
+
 	.current_poster
 		&:after
 			display: none
 		.poster_data
 			padding-bottom: 5px
+
+	.contact_page 
+		.item_contact 
+			.phone 
+				span
+					display: block
+					margin-bottom: 15px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
@@ -267,6 +275,7 @@
 						left: 0
 				.num
 					margin-left: 0
+
 	.current_poster
 		.poster_data
 			.wrap_img
@@ -276,6 +285,13 @@
 				.poster_img
 					width: 100%
 
+	.contact_page
+		&:after
+			display: none
+		.col_right 
+			padding-top: 0
+		.col_left
+			padding-bottom: 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)

@@ -1,0 +1,46 @@
+.contact_page
+	position: relative
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		height: 100%
+		width: 1px
+		background-color: #e6e6e6
+		left: 50%
+		top: 0	
+		z-index: -1
+	.col_left, .col_right
+		padding-left: 50px
+		padding-top: 50px
+		padding-bottom: 15px
+		.item_contact
+			&:last-child
+				&:after
+					display: none
+	.item_contact
+		margin-bottom: 50px
+		&:after
+			content: ""
+			width: 160px
+			background-color: #CCC
+			height: 1px
+			display: block
+			margin-top: -10px
+		.phone
+			font-size: 24pt
+			font-family: HeuristicaRegular
+			color: #999
+			margin-bottom: 5px
+			span
+				font-size: 12pt
+		.name
+			font-family: HeuristicaRegular
+			font-size: 12pt
+			color: #666666
+.map
+	height: 316px
+	img
+		width: 100%
+
+	
