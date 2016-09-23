@@ -18,6 +18,7 @@ $(function() {
   itemsDesktopSmall : [980,1],
   itemsTablet: [768,1],
   stopOnHover: true,
+  stagePadding: 50,
   singleItem : true,
   // autoHeight : true,
   // transitionStyle:"fade"
