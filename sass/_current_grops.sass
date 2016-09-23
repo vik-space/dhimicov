@@ -1,10 +1,21 @@
 .groups_slider
 	.foto_groups
-		padding-left: 110px
-		padding-right: 110px
+		// padding-left: 110px
+		// padding-right: 110px
 		padding-top: 16px
 		img
 			width: 100%
+			transition: transform ease .4s
+	.owl-item
+		.foto_groups
+			img
+				transform: scale(.8)
+	.owl-item.active
+		padding-top: 0
+		padding-bottom: 0
+		.foto_groups
+			img
+				transform: scale(1)
 
 .section_current_groups
 	position: relative

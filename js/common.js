@@ -1,54 +1,107 @@
 $(function() {
 
  $("#carusel_photo_report").owlCarousel({
- 	items : 1,
- 	slideSpeed: 1000,
- 	autoPlay: true,
- 	itemsDesktop : [1199,1],
- 	itemsDesktopSmall : [980,1],
- 	itemsTablet: [768,1],
- 	stopOnHover: true
- });
-
- $(".groups_slider").owlCarousel({
-  items : 1,
-  slideSpeed: 1000,
-  autoPlay: true,
-  itemsDesktop : [1199,1],
-  itemsDesktopSmall : [980,1],
-  itemsTablet: [768,1],
-  stopOnHover: true,
-  stagePadding: 50,
-  singleItem : true,
-  // autoHeight : true,
-  // transitionStyle:"fade"
+  loop:true,
+  margin:0,
+  autoplay: true,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
+  items: 1,
+  smartSpeed: 1000,
 });
 
-
  $(".carusel").owlCarousel({
- 	items : 1,
- 	slideSpeed: 1000,
- 	autoPlay: true,
- 	itemsDesktop : [1199,1],
- 	itemsDesktopSmall : [980,1],
- 	itemsTablet: [768,1],
- 	stopOnHover: true
- });
- 
-
- $(".custom_prev").click(function() {
-   $("#carusel_photo_report").trigger("owl.prev");
- });
- $(".custom_next").click(function() {
-   $("#carusel_photo_report").trigger("owl.next");
+   loop:true,
+   margin:0,
+   autoplay: true,
+   autoplayTimeout: 2000,
+   autoplayHoverPause: true,
+   items: 1,
+   smartSpeed: 1200,
  });
 
- $(".custom_prev_banner").click(function() {
-   $(".carusel").trigger("owl.prev");
- });
- $(".custom_next_banner").click(function() {
-   $(".carusel").trigger("owl.next");
- });
+// Настройки карусели для страницы конкретного коллектива, в зависимости от разрешения
+if (document.documentElement.clientWidth > 1450){
+ $(".groups_slider").owlCarousel({
+  stagePadding: 350,
+  loop:true,
+  margin:0,
+  autoplay: true,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
+  items: 1,
+  smartSpeed: 1500,
+})
+}
+
+if (document.documentElement.clientWidth > 992 && document.documentElement.clientWidth < 1450){
+ $(".groups_slider").owlCarousel({
+  stagePadding: 200,
+  loop:true,
+  margin:0,
+  autoplay: true,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
+  items: 1,
+  smartSpeed: 1500,
+})
+}
+
+if (document.documentElement.clientWidth > 767 && document.documentElement.clientWidth < 992){
+ $(".groups_slider").owlCarousel({
+  stagePadding: 100,
+  loop:true,
+  margin:0,
+  autoplay: true,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
+  items: 1,
+  smartSpeed: 1500,
+})
+}
+
+if (document.documentElement.clientWidth < 767){
+ $(".groups_slider").owlCarousel({
+  loop:true,
+  margin:0,
+  autoplay: true,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
+  items: 1,
+  smartSpeed: 1500,
+})
+}
+// var resizeCarusel = function(e){
+
+// };
+
+// (function(){
+// var time;
+// window.onresize = function(e){
+//   if (time)
+//     clearTimeout(time);
+//   time = setTimeout(function(){
+//     resizeCarusel(e);
+//   },100);
+// }
+// })();
+
+
+
+
+$(".custom_prev").click(function() {
+ $("#carusel_photo_report").trigger('prev.owl.carousel');
+});
+$(".custom_next").click(function() {
+ $("#carusel_photo_report").trigger('next.owl.carousel');
+});
+
+$(".custom_prev_banner").click(function() {
+ $(".carusel").trigger('prev.owl.carousel');
+});
+$(".custom_next_banner").click(function() {
+ $(".carusel").trigger('next.owl.carousel');
+});
 
 
 // Вычисление максимальной высоты колонок Афиша и Новости, меньшей колонке присваиваем большую высоту
@@ -98,9 +151,9 @@ if($.trim(heght_this_new) != '' && $.trim(heght_news_list) != '' &&  document.do
 
 //Прилипание контактов на странице коллектива
 
-  heght_description_groups = $(".col_description_groups").css('height');
+heght_description_groups = $(".col_description_groups").css('height');
 
-  if(document.documentElement.clientWidth > 992 && $.trim(heght_description_groups) != ''){
+if(document.documentElement.clientWidth > 992 && $.trim(heght_description_groups) != ''){
 
   heght_description_groups = Number(heght_description_groups.substr(0, heght_description_groups.length - 2));
   $(".col_data").height(heght_description_groups);
